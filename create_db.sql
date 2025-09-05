@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS vendas;
+
+USE vendas;
+
+CREATE TABLE IF NOT EXISTS item (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidadeDisponivel INT NOT NULL DEFAULT 0,
+    subcategoria VARCHAR(255)
+);
